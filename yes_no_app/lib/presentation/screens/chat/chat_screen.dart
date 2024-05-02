@@ -19,7 +19,7 @@ class ChatScreen extends StatelessWidget {
           padding: EdgeInsets.all(4.0),
           child: CircleAvatar(
             radius: 60,
-            backgroundImage: NetworkImage('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/415004360_2664862580332715_6779704559452544924_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFLTYMphtiyOMWVrHNlRd7UNEG0shPa1680QbSyE9rXr4ZDMQxx8Uvyc2JPvqBfFuIys-oPJ0lNOu5kSxjWzy4N&_nc_ohc=kfKo8NswaAYQ7kNvgFZlxon&_nc_ht=scontent-dfw5-2.xx&oh=00_AfD6hY4x-YM8fJysGA9fhjgBqXi5WoBaQCZqDJwwC0FXmA&oe=6630CAE4'),
+            backgroundImage: NetworkImage('https://scontent.fmid6-1.fna.fbcdn.net/v/t39.30808-6/415004360_2664862580332715_6779704559452544924_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFLTYMphtiyOMWVrHNlRd7UNEG0shPa1680QbSyE9rXr4ZDMQxx8Uvyc2JPvqBfFuIys-oPJ0lNOu5kSxjWzy4N&_nc_ohc=uxj8qwMUHr0Q7kNvgGgeNw5&_nc_ht=scontent.fmid6-1.fna&oh=00_AfCyZMOp-WOo4sKk-qYX7oj2AgGLNgU3ojTUvEIt9o1JeQ&oe=663994E4'),
           ),
         ),
         title: const Text('My princess <3'),
@@ -53,7 +53,7 @@ class _ChatView extends StatelessWidget {
 
               return (message.fromWho == FromWho.hers)
 
-              ? const HerMessageBubble()
+              ?  HerMessageBubble(message: message,)
               : MyMessageBubble(message: message,);
       
             },)

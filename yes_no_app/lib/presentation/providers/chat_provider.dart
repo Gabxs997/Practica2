@@ -14,6 +14,8 @@ final getYesNoAnswer = GetYesNoAnswer();
 
   // metodo para enviar mensaje
   Future<void> sendMessage(String text) async {
+
+    if(text.isEmpty) return;
 //El mensaje siempre va a ser de "me" (o mío) porque
 //yo, el usuario, siempre será el que envíe el mensaje
     final newMessage = Message(text: text, fromWho: FromWho.me);
