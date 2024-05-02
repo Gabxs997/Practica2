@@ -25,8 +25,11 @@ final inputDecoration = InputDecoration(
 
           final textValue = textController.value.text;
           //print('button: $textValue');
-          onValue(textValue);
-          textController.clear();
+          
+          if (textValue.trim().isNotEmpty) { // Verifica que el texto no esté vacío después de recortar los espacios en blanco
+            onValue(textValue.trim());
+            textController.clear();
+          }
         },
       )
     );
